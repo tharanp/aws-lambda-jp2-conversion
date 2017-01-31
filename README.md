@@ -17,8 +17,10 @@ In this project we are converting tiff images into jp2.
 ## Installation
 <ul>
 <li>Checkout this branch and see package.json file. These are required npm modules that need to be installed.  </li>
-<li>Run following command to install these node-modules.<br />
+<li>Run following command to install these node-modules.<br /><br />
+```
 npm install
+```
 </li>
 <li>Create new Lambda function, Zip this whole projecct and upload this zip file. </li>
 
