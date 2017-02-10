@@ -179,8 +179,9 @@ exports.handler = function(event, context, callback) {
 
 			console.log('Conversion Image Starting...');
 			// console.log(data);
-
-			var dstKey = srcFileKey.toLowerCase() + ".jp2";
+			
+			// converting to lowerCase and Removing space and + sign for output file
+			var dstKey = srcFileKey.toLowerCase().replace(/\s/g, '').replace(/\+/g, '') + ".jp2";
 			var output_file_path = "/tmp/" + path.basename(srcFileKey) + ".jp2";
 			// convert_image_and_upload(local_stored_file_path, output_file_path, dstBucket, dstKey,
 			// function(upload_err, upload_data) {

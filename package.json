@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "aws-sdk": "^2.5.0",
-    "gm": "^1.23.0",
+    "gm": "^1.23.0"
   },
   "devDependencies": {},
   "scripts": {
