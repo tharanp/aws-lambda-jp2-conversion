@@ -6,7 +6,9 @@ var gm = require('gm').subClass({
 	imageMagick : true
 });
 
-
+//var s3 = new AWS.S3({
+//	region : 'us-east-2'
+//});
 var s3 = new AWS.S3();
 var srcFileExt = null;
 
@@ -177,8 +179,7 @@ exports.handler = function(event, context, callback) {
 
 			console.log('Conversion Image Starting...');
 			// console.log(data);
-			
-			// converting to lowerCase and Removing space and + sign for output file
+
 			var dstKey = srcFileKey.toLowerCase().replace(/\s/g, '').replace(/\+/g, '') + ".jp2";
 			var output_file_path = "/tmp/" + path.basename(srcFileKey) + ".jp2";
 			// convert_image_and_upload(local_stored_file_path, output_file_path, dstBucket, dstKey,
